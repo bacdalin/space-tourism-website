@@ -1,0 +1,87 @@
+@import 'config';
+@import 'typography';
+@import 'utilities';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+// NAV BAR
+.nav-line {
+    display: none;
+}
+
+// HOMEPAGE
+body {
+    color: $primary-color;
+    background: url('../assets/home/background-home-mobile.jpg') no-repeat;
+    background-size: cover;
+}
+
+a {
+    color: $primary-color;
+}
+
+
+// *** MEDIUM SCREEN ***
+@media (min-width: px-to-rem(768)) {
+    // NAV BAR
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: px-to-rem(40);
+    
+        .logo-container {
+            padding-left: px-to-rem(64);
+            display: flex;
+            align-items: center;
+        }
+    
+        .nav-list-container {
+            display: inline-flex;
+            justify-content: flex-end;
+            min-width: px-to-rem(664);
+            align-items: center;
+            gap: px-to-rem(48);
+            padding: 0 px-to-rem(64) 0 px-to-rem(240); // Adjust padding to offset negative margin
+            height: px-to-rem(96);
+            background-color: rgba($primary-color, 0.05);
+            backdrop-filter: blur(40px);
+
+            .nav-item {
+                min-width: fit-content;
+            }
+        }
+    }
+
+    // HOMEPAGE
+    body {
+        background-image: url('../assets/home/background-home-tablet.jpg');
+    }
+}
+
+
+// *** LARGE SCREEN ***
+@media (min-width: px-to-rem(1440)) {
+    // NAV BAR
+    .nav-list-container{
+        /* Extend the background to the left */
+        margin-left: calc(px-to-rem(176) * -1);  // Negative margin to extend background
+    }
+    .nav-line {
+        display: inline-block;
+        height: 1px;
+        width: px-to-rem(656);
+        margin-left: px-to-rem(64);
+        background-color: rgba($primary-color, 0.25);
+        z-index: 1;  // Ensure it's above background if necessary
+    }
+
+    // HOMEPAGE
+    body {
+        background-image: url('../assets/home/background-home-desktop.jpg');
+    }
+}

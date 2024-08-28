@@ -1,0 +1,15 @@
+// Colors
+$primary-color: #ffffff;
+$secondary-color: #D0D6F9;
+$tertiary-color: #0B0D17;
+
+
+
+// Mixins & Functions
+// **Convert px to rem for accessibility
+@function px-to-rem($pixel) {
+    @return calc($pixel / 16 * 1rem )
+};
+
+
+
