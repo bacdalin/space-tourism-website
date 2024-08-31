@@ -8,50 +8,63 @@
     padding: 0;
 }
 
-// NAV BAR
-.nav-line {
-    display: none;
+body {
+
+    color: $primary-color;
+    background: url('../assets/home/background-home-mobile.jpg') no-repeat;
+    background-size: cover;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+a {
+    color: $primary-color;
+}
+
+// NAV BAR
+.nav-line,
 .nav-list-container-lg-screen {
     display: none;
 }
 
 .nav-container {
-    // display: flex;
     justify-content: space-between;
     align-items: center;
     padding: px-to-rem(24) 0;
 
     .logo-container {
         padding-left: px-to-rem(24);
-        // display: flex;
         align-items: center;
     }
 
     .hamburger-icon {
         padding-right: px-to-rem(24);
+        z-index: 10;
+        background: none;
+        border: none;
     }
 
-    .hamburger-menu-contianer {
+    .hamburger-menu-container {
         @include bg-blur;
-        position: absolute;
-        right: 0;
+        position: fixed;
+        right: -70%; // Hide the hamburger menu items by default
         top: 0;
         width: 70%;
         height: 100vh;
-        display: none;
         flex-direction: column;
-        gap: px-to-rem(48);
+        padding-top: px-to-rem(148);
         padding-left: px-to-rem(32);
+        transition: right 0.3s ease-in-out; // Sliding transition for the hamburger menu
 
-        .close-hamburger-icon {
-            align-self: flex-end;
-            padding: px-to-rem(32) px-to-rem(24) px-to-rem(32) 0;
+        &.open {
+            right: 0;
         }
 
-        .hamburger-nav-list-contianer {
-            // display: flex;
+        .hamburger-nav-list-container {
             flex-direction: column;
             gap: px-to-rem(32);
         }
@@ -59,20 +72,22 @@
 }
 
 // HOMEPAGE
-body {
-    color: $primary-color;
-    background: url('../assets/home/background-home-mobile.jpg') no-repeat;
-    background-size: cover;
-}
-
-a {
-    color: $primary-color;
-}
-
 .hero-container, .hero-text-wrapper {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
+
+.hero-container {
+    flex: 1;
+    padding: px-to-rem(24);
+    gap: px-to-rem(8);
+    height: 100%;
+}
+
+// .hero-text-wrapper, .btn-wrapper {
+//     align-self: stretch;
+// }
 
 
 
