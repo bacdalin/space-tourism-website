@@ -1,26 +1,38 @@
-// import React from 'react'
 import { Link } from 'react-router-dom';
 import logo from '../assets/shared/logo.svg';
+import hamburger from '../assets/shared/icon-hamburger.svg';
+import closeIcon from '../assets/shared/icon-close.svg';
+import NavItems from './NavItems';
 
 const NavBar = () => {
-  return (
-    <nav>
-        <div className='nav-container'>
-            <div className='logo-container'>
-                <Link to="#">
-                    <img src={logo} alt=" " />
-                </Link>
-                <div className='nav-line'></div>
+    return (
+        <nav>
+            <div className='nav-container flex'>
+                <div className='logo-container flex'>
+                    <Link to="#">
+                        <img src={logo} alt=" " />
+                    </Link>
+                    <div className='nav-line'></div>
+                </div>
+                <div className='nav-list-container-lg-screen text-preset-8'>
+                    <NavItems />
+                </div>
+
+                {/* Hamburger Menu */}
+                <div className='hamburger-icon toggle-on'>
+                    <img src={hamburger} alt="Hamburger Menu" />
+                </div>
+                <div className='hamburger-menu-contianer toggle-off'>
+                    <div className='close-hamburger-icon'>
+                        <img src={closeIcon} alt="Close Hamburger Menu" />
+                    </div>
+                    <div className='hamburger-nav-list-contianer text-preset-8 flex'>
+                        <NavItems />
+                    </div>
+                </div>
             </div>
-            <div className='nav-list-container'>
-                <Link to="#" className='text-preset-8 nav-item'><strong>00</strong> HOME</Link>
-                <Link to="#" className='text-preset-8 nav-item'><strong>01</strong> DESTINATION</Link>
-                <Link to="#" className='text-preset-8 nav-item'><strong>02</strong> CREW</Link>
-                <Link to="#" className='text-preset-8 nav-item'><strong>03</strong> TECHNOLOGY</Link>
-            </div>
-        </div>
-    </nav>
-  )
+        </nav>
+    )
 }
 
 export default NavBar

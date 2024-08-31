@@ -3,7 +3,12 @@ $primary-color: #ffffff;
 $secondary-color: #D0D6F9;
 $tertiary-color: #0B0D17;
 
-
+// Bg
+// **Using @mixin instead of @extend because @extend selectors across media queries is not allowed.
+@mixin bg-blur {
+    background-color: rgba($primary-color, 0.05);
+    backdrop-filter: blur(40px);
+}
 
 // Mixins & Functions
 // **Convert px to rem for accessibility

@@ -93,6 +93,44 @@ strong {
   display: none;
 }
 
+.nav-list-container-lg-screen {
+  display: none;
+}
+
+.nav-container {
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+.nav-container .logo-container {
+  padding-left: 1.5rem;
+  align-items: center;
+}
+.nav-container .hamburger-icon {
+  padding-right: 1.5rem;
+}
+.nav-container .hamburger-menu-contianer {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(40px);
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 70%;
+  height: 100vh;
+  display: none;
+  flex-direction: column;
+  gap: 3rem;
+  padding-left: 2rem;
+}
+.nav-container .hamburger-menu-contianer .close-hamburger-icon {
+  align-self: flex-end;
+  padding: 2rem 1.5rem 2rem 0;
+}
+.nav-container .hamburger-menu-contianer .hamburger-nav-list-contianer {
+  flex-direction: column;
+  gap: 2rem;
+}
+
 body {
   color: #ffffff;
   background: url("../assets/home/background-home-mobile.jpg") no-repeat;
@@ -103,19 +141,22 @@ a {
   color: #ffffff;
 }
 
+.hero-container, .hero-text-wrapper {
+  flex-direction: column;
+  align-items: center;
+}
+
 @media (min-width: 48rem) {
   .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 2.5rem;
+    padding-top: 2.5rem 0;
   }
   .nav-container .logo-container {
     padding-left: 4rem;
-    display: flex;
-    align-items: center;
   }
-  .nav-container .nav-list-container {
+  .nav-container .hamburger-icon {
+    display: none;
+  }
+  .nav-container .nav-list-container-lg-screen {
     display: inline-flex;
     justify-content: flex-end;
     min-width: 41.5rem;
@@ -126,7 +167,7 @@ a {
     background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(40px);
   }
-  .nav-container .nav-list-container .nav-item {
+  .nav-container .nav-list-container-lg-screen .nav-item {
     min-width: fit-content;
   }
   body {
@@ -134,8 +175,8 @@ a {
   }
 }
 @media (min-width: 90rem) {
-  .nav-list-container {
-    /* Extend the background to the left */
+  .nav-list-container-lg-screen {
+    /* Negative margin to extend the background to the left */
     margin-left: -11rem;
   }
   .nav-line {
