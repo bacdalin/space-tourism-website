@@ -1,66 +1,6 @@
-.text-preset-6, .text-preset-4, .text-preset-3, .text-preset-2, .text-preset-1 {
-  font-family: "Bellefair", serif;
-  font-weight: 400;
-  font-style: normal;
-  text-transform: uppercase;
-}
-
-.text-preset-9 {
-  font-family: "Barlow", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.text-preset-8, .text-preset-7, .text-preset-5 {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  text-transform: uppercase;
-}
-
-.text-preset-1 {
-  font-size: 9rem;
-}
-
-.text-preset-2 {
-  font-size: 6rem;
-}
-
-.text-preset-3 {
-  font-size: 3.5rem;
-}
-
-.text-preset-4 {
-  font-size: 2rem;
-}
-
-.text-preset-5 {
-  font-size: 1.75rem;
-  letter-spacing: 4px;
-}
-
-.text-preset-6 {
-  font-size: 1.75rem;
-}
-
-.text-preset-7 {
-  font-size: 0.875rem;
-  letter-spacing: 2px;
-}
-
-.text-preset-8 {
-  font-size: 1rem;
-  letter-spacing: 2px;
-}
-
-.text-preset-9 {
-  font-size: 1.125rem;
-  line-height: 180%;
-}
-
 strong {
   font-weight: 700;
-  letter-spacing: 2.7px;
+  letter-spacing: 0.16875rem;
 }
 
 .color-primary {
@@ -79,6 +19,145 @@ strong {
   color: #0B0D17;
 }
 
+.text-preset-1 {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 5rem;
+}
+
+.text-preset-2 {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+}
+
+.text-preset-3 {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.text-preset-4 {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+}
+
+.text-preset-5 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  letter-spacing: 0.1875rem;
+}
+
+.text-preset-6 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.15625rem;
+}
+
+.text-preset-7 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.125rem;
+}
+
+.text-preset-8 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.125rem;
+}
+
+.text-preset-8-mobile {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.125rem;
+}
+
+.text-preset-8-bold {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.16875rem;
+}
+
+.text-preset-9 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 180%;
+}
+
+@media (min-width: 48rem) {
+  .text-preset-1 {
+    font-size: 9rem;
+  }
+  .text-preset-2 {
+    font-size: 5rem;
+  }
+  .text-preset-3 {
+    font-size: 2.5rem;
+  }
+  .text-preset-4 {
+    font-size: 1.5rem;
+  }
+  .text-preset-6 {
+    font-family: "Bellefair", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 1.75rem;
+  }
+  .text-preset-8 {
+    font-size: 1rem;
+    letter-spacing: 0.125rem;
+  }
+  .text-preset-9 {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 90rem) {
+  .text-preset-2 {
+    font-size: 6rem;
+  }
+  .text-preset-3 {
+    font-size: 3.5rem;
+  }
+  .text-preset-4 {
+    font-size: 2rem;
+  }
+  .text-preset-5 {
+    font-size: 1.75rem;
+  }
+  .text-preset-9 {
+    font-size: 1.125rem;
+  }
+}
 .d-flex {
   display: flex;
 }
@@ -97,6 +176,7 @@ body {
   color: #ffffff;
   background: url("../assets/home/background-home-mobile.jpg") no-repeat;
   background-size: cover;
+  text-align: center;
 }
 
 .wrapper {
@@ -107,6 +187,7 @@ body {
 
 a {
   color: #ffffff;
+  text-decoration: none;
 }
 
 .nav-line,
@@ -137,7 +218,6 @@ a {
   top: 0;
   width: 70%;
   height: 100vh;
-  flex-direction: column;
   padding-top: 9.25rem;
   padding-left: 2rem;
   transition: right 0.3s ease-in-out;
@@ -147,10 +227,21 @@ a {
 }
 .nav-container .hamburger-menu-container .hamburger-nav-list-container {
   flex-direction: column;
+  align-items: flex-start;
   gap: 2rem;
+  width: 100%;
+  text-align: left;
+}
+.nav-container .hamburger-menu-container .nav-item {
+  width: 100%;
+}
+.nav-container .hamburger-menu-container .active-nav-item {
+  border-right: solid 3px #ffffff;
 }
 
-.hero-container, .hero-text-wrapper {
+.hero-container,
+.hero-text-wrapper,
+.btn-wrapper {
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -161,6 +252,28 @@ a {
   padding: 1.5rem;
   gap: 0.5rem;
   height: 100%;
+}
+
+.hero-text-wrapper,
+.btn-wrapper {
+  flex: 1;
+}
+
+.hero-text-wrapper {
+  gap: 1.5rem;
+}
+
+.main-btn {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+  border: none;
+}
+
+.main-container,
+.content-container,
+.destination-info-container {
+  flex-direction: column;
 }
 
 @media (min-width: 48rem) {
@@ -194,22 +307,29 @@ a {
   }
 }
 @media (min-width: 90rem) {
-  .nav-list-container-lg-screen {
-    min-width: 41.5rem;
-    margin-left: -11rem;
-    padding: 0 4rem 0 15rem;
-    gap: 5rem;
+  .nav-container {
+    padding-top: 2.5rem;
   }
-  .nav-line {
+  .nav-container .logo-container {
+    padding-left: 4rem;
+    gap: 4rem;
+  }
+  .nav-container .nav-line {
     display: inline-block;
     height: 1px;
     width: 41rem;
-    margin-left: 4rem;
     background-color: rgba(255, 255, 255, 0.25);
     z-index: 1;
   }
+  .nav-container .nav-list-container-lg-screen {
+    min-width: 41.5rem;
+    margin-left: -8.125rem;
+    padding: 0 4rem 0 12.125rem;
+    gap: 3rem;
+  }
   body {
     background-image: url("../assets/home/background-home-desktop.jpg");
+    text-align: left;
   }
 }
 

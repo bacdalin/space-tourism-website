@@ -1,77 +1,6 @@
-// Fonts
-%font-serif {
-    font-family: "Bellefair", serif;
-    font-weight: 400;
-    font-style: normal;
-    text-transform: uppercase;
-}
-
-%font-sans-serif {
-    font-family: "Barlow", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-%font-sans-serif-condensed {
-    font-family: "Barlow Condensed", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    text-transform: uppercase;
-}
-
-// Text Presets
-.text-preset-1 {
-    @extend %font-serif;
-    font-size: px-to-rem(144);
-}
-
-.text-preset-2 {
-    @extend %font-serif;
-    font-size: px-to-rem(96);
-}
-
-.text-preset-3 {
-    @extend %font-serif;
-    font-size: px-to-rem(56);
-}
-
-.text-preset-4 {
-    @extend %font-serif;
-    font-size: px-to-rem(32);
-}
-
-.text-preset-5 {
-    @extend %font-sans-serif-condensed;
-    font-size: px-to-rem(28);
-    letter-spacing: 4px;
-}
-
-.text-preset-6 {
-    @extend %font-serif;
-    font-size: px-to-rem(28);
-}
-
-.text-preset-7 {
-    @extend %font-sans-serif-condensed;
-    font-size: px-to-rem(14);
-    letter-spacing: 2px;
-}
-
-.text-preset-8 {
-    @extend %font-sans-serif-condensed;
-    font-size: px-to-rem(16);
-    letter-spacing: 2px;
-}
-
-.text-preset-9 {
-    @extend %font-sans-serif;
-    font-size: px-to-rem(18);
-    line-height: 180%;
-}
-
 strong {
     font-weight: 700;
-    letter-spacing: 2.7px;
+    letter-spacing: px-to-rem(2.7);
 }
 
 // Text Color
@@ -89,4 +18,147 @@ strong {
 
 .color-tertiary {
     color: $tertiary-color;
+}
+
+// Fonts
+// *** Using @mixin instead of @extend because the latter can't be used across media queries
+@mixin font-serif {
+    font-family: "Bellefair", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+@mixin font-sans-serif {
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin font-sans-serif-condensed {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+// Text Presets For Mobile
+.text-preset-1 {
+    @include font-serif;
+    font-size: px-to-rem(80);
+}
+
+.text-preset-2 {
+    @include font-serif;
+    font-size: px-to-rem(56);
+}
+
+.text-preset-3 {
+    @include font-serif;
+    font-size: px-to-rem(24);
+}
+
+.text-preset-4 {
+    @include font-serif;
+    font-size: px-to-rem(18);
+}
+
+.text-preset-5 {
+    @include font-sans-serif-condensed;
+    font-size: px-to-rem(20);
+    letter-spacing: px-to-rem(3);
+}
+
+.text-preset-6 {
+    @include font-sans-serif-condensed;
+    font-size: px-to-rem(16);
+    letter-spacing: px-to-rem(2.5);
+}
+
+.text-preset-7 {
+    @include font-sans-serif-condensed;
+    font-size: px-to-rem(14);
+    letter-spacing: px-to-rem(2);
+}
+
+.text-preset-8 {
+    @include font-sans-serif-condensed;
+    font-size: px-to-rem(16);
+    letter-spacing: px-to-rem(2);
+}
+
+.text-preset-8-mobile {
+    @include font-sans-serif-condensed;
+    font-size: px-to-rem(14);
+    letter-spacing: px-to-rem(2);
+}
+
+.text-preset-8-bold {
+    @include font-sans-serif-condensed;
+    font-size: px-to-rem(16);
+    letter-spacing: px-to-rem(2.7);
+}
+
+.text-preset-9 {
+    @include font-sans-serif;
+    font-size: px-to-rem(15);
+    line-height: 180%;
+}
+
+
+@media (min-width: px-to-rem(768)) {
+    // Text Presets For Tablet
+    .text-preset-1 {
+        font-size: px-to-rem(144);
+    }
+
+    .text-preset-2 {
+        font-size: px-to-rem(80);
+    }
+
+    .text-preset-3 {
+        font-size: px-to-rem(40);
+    }
+
+    .text-preset-4 {
+        font-size: px-to-rem(24);
+    }
+
+    .text-preset-6 {
+        @include font-serif;
+        font-size: px-to-rem(28);
+    }
+
+    .text-preset-8 {
+        font-size: px-to-rem(16);
+        letter-spacing: px-to-rem(2);
+    }
+
+    .text-preset-9 {
+        font-size: px-to-rem(16);
+    }
+}
+
+
+@media (min-width: px-to-rem(1440)) {
+    // Text Presets For Desktop
+    .text-preset-2 {
+        font-size: px-to-rem(96);
+    }
+
+    .text-preset-3 {
+        font-size: px-to-rem(56);
+    }
+
+    .text-preset-4 {
+        font-size: px-to-rem(32);
+    }
+
+    .text-preset-5 {
+        font-size: px-to-rem(28);
+    }
+
+    .text-preset-9 {
+        font-size: px-to-rem(18);
+    }
 }

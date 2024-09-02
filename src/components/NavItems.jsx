@@ -1,12 +1,17 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const NavItems = () => {
+  const linkClass = ({ isActive }) => 
+    isActive
+    ? 'nav-item active-nav-item text-preset-8'
+    : 'nav-item';
+
   return (
     <>
-        <Link to="#" className='nav-item'><strong>00</strong> HOME</Link>
-        <Link to="#" className='nav-item'><strong>01</strong> DESTINATION</Link>
-        <Link to="#" className='nav-item'><strong>02</strong> CREW</Link>
-        <Link to="#" className='nav-item'><strong>03</strong> TECHNOLOGY</Link>
+        <NavLink to="/" className={linkClass}><strong>00</strong> HOME</NavLink>
+        <NavLink to="/destination" className={linkClass}><strong>01</strong> DESTINATION</NavLink>
+        <NavLink to="#" className={linkClass}><strong>02</strong> CREW</NavLink>
+        <NavLink to="#" className={linkClass}><strong>03</strong> TECHNOLOGY</NavLink>
     </>
   )
 }

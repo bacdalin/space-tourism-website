@@ -9,10 +9,10 @@
 }
 
 body {
-
     color: $primary-color;
     background: url('../assets/home/background-home-mobile.jpg') no-repeat;
     background-size: cover;
+    text-align: center;
 }
 
 .wrapper {
@@ -23,6 +23,7 @@ body {
 
 a {
     color: $primary-color;
+    text-decoration: none;
 }
 
 // NAV BAR
@@ -55,7 +56,6 @@ a {
         top: 0;
         width: 70%;
         height: 100vh;
-        flex-direction: column;
         padding-top: px-to-rem(148);
         padding-left: px-to-rem(32);
         transition: right 0.3s ease-in-out; // Sliding transition for the hamburger menu
@@ -66,13 +66,26 @@ a {
 
         .hamburger-nav-list-container {
             flex-direction: column;
+            align-items: flex-start;
             gap: px-to-rem(32);
+            width: 100%;     
+            text-align: left;       
+        }
+
+        .nav-item {
+            width: 100%;
+        }
+
+        .active-nav-item {
+            border-right: solid 3px $primary-color;
         }
     }
 }
 
 // HOMEPAGE
-.hero-container, .hero-text-wrapper {
+.hero-container,
+.hero-text-wrapper,
+.btn-wrapper {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -85,11 +98,29 @@ a {
     height: 100%;
 }
 
-// .hero-text-wrapper, .btn-wrapper {
-//     align-self: stretch;
-// }
+.hero-text-wrapper,
+.btn-wrapper {
+    flex: 1;
+}
+
+.hero-text-wrapper {
+    gap: px-to-rem(24);
+}
 
 
+.main-btn {
+    width: px-to-rem(144);
+    height: px-to-rem(144);
+    border-radius: 50%;
+    border: none;
+}
+
+// DESTINATION PAGE
+.main-container,
+.content-container,
+.destination-info-container {
+    flex-direction: column;
+}
 
 
 // *** MEDIUM SCREEN ***
@@ -135,23 +166,33 @@ a {
 // *** LARGE SCREEN ***
 @media (min-width: px-to-rem(1440)) {
     // NAV BAR
-    .nav-list-container-lg-screen{
-        min-width: px-to-rem(664);
-        margin-left: calc(px-to-rem(176) * -1); // Negative margin to extend the background to the left
-        padding: 0 px-to-rem(64) 0 px-to-rem(240); // Adjust padding to offset negative margin
-        gap: px-to-rem(80);
-    }
-    .nav-line {
-        display: inline-block;
-        height: 1px;
-        width: px-to-rem(656);
-        margin-left: px-to-rem(64);
-        background-color: rgba($primary-color, 0.25);
-        z-index: 1;  // Ensure it's above background if necessary
+    .nav-container {
+        padding-top: px-to-rem(40);
+
+        .logo-container {
+            padding-left: px-to-rem(64);
+            gap: px-to-rem(64);
+        }
+
+        .nav-line {
+            display: inline-block;
+            height: 1px;
+            width: px-to-rem(656);
+            background-color: rgba($primary-color, 0.25);
+            z-index: 1;  // Ensure it's above background if necessary
+        }
+
+        .nav-list-container-lg-screen{
+            min-width: px-to-rem(664);
+            margin-left: calc(px-to-rem(130) * -1); // Negative margin to extend the background to the left
+            padding: 0 px-to-rem(64) 0 px-to-rem(194); // Adjust padding to offset negative margin
+            gap: px-to-rem(48);
+        }
     }
 
     // HOMEPAGE
     body {
         background-image: url('../assets/home/background-home-desktop.jpg');
+        text-align: left;
     }
 }
