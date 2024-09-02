@@ -96,24 +96,27 @@ a {
 @media (min-width: px-to-rem(768)) {
     // NAV BAR
     .nav-container {
-        padding-top: px-to-rem(40) 0;
+        padding: 0;
+        // gap: px-to-rem(32);
     
         .logo-container {
-            padding-left: px-to-rem(64);
+            padding: 0 px-to-rem(40);
         }
 
-        .hamburger-icon {
+        .hamburger-icon,
+        .hamburger-menu-container {
             display: none;
         }
     
         .nav-list-container-lg-screen {
-            display: inline-flex;
+            display: flex;
             justify-content: flex-end;
-            min-width: px-to-rem(664);
+            min-width: px-to-rem(488);
+            padding: 0 px-to-rem(40);
             align-items: center;
             gap: px-to-rem(48);
-            padding: 0 px-to-rem(64) 0 px-to-rem(240); // Adjust padding to offset negative margin
             height: px-to-rem(96);
+            flex: 1;
             @include bg-blur;
 
             .nav-item {
@@ -133,8 +136,10 @@ a {
 @media (min-width: px-to-rem(1440)) {
     // NAV BAR
     .nav-list-container-lg-screen{
-        /* Negative margin to extend the background to the left */
-        margin-left: calc(px-to-rem(176) * -1);
+        min-width: px-to-rem(664);
+        margin-left: calc(px-to-rem(176) * -1); // Negative margin to extend the background to the left
+        padding: 0 px-to-rem(64) 0 px-to-rem(240); // Adjust padding to offset negative margin
+        gap: px-to-rem(80);
     }
     .nav-line {
         display: inline-block;
