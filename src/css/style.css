@@ -274,6 +274,22 @@ a {
 .content-container,
 .destination-info-container {
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-container {
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.destination-img {
+  padding: 2rem;
+}
+
+.destination-img img {
+  width: 9.375rem;
+  height: 9.375rem;
 }
 
 @media (min-width: 48rem) {

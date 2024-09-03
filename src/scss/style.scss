@@ -120,6 +120,22 @@ a {
 .content-container,
 .destination-info-container {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container {
+    padding: px-to-rem(24);
+    height: 100%;
+}
+
+.destination-img {
+    padding: px-to-rem(32);
+}
+
+.destination-img img {
+    width: px-to-rem(150);
+    height: px-to-rem(150);
 }
 
 

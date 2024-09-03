@@ -1,12 +1,13 @@
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
+import moonImg from '../assets/destination/image-moon.png';
 
 const DestinationPage = () => {
   return (
         <div className="d-flex main-container">
-            <div className="d-flex page-heading text-preset-6"><strong>01</strong> Pick you destination</div>
+            <div className="d-flex page-heading text-preset-6"><strong className="color-light-primary">01</strong>&nbsp;Pick you destination</div>
             <div className="d-flex content-container">
                 <div className="d-flex destination-img">
-                    {/* <img src="" alt="" /> */}
+                    <img src={moonImg} alt="Image of the Moon" />
                 </div>
                 <div className="d-flex destination-info-container">
                     <div className="d-flex tab-container">

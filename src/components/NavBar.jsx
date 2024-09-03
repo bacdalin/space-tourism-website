@@ -45,10 +45,11 @@ const NavBar = () => {
                 >
                     <img src={isToggled ? closeIcon : hamburger} alt={isToggled ? 'Close Menu' : 'Open Menu'} />
                 </button>
+                {/* Give the hamburger menu container the class 'open' when it is open */}
                 <div className={`d-flex hamburger-menu-container ${isToggled ? 'open' : ''}`}>
-                    {/* Give the hamburger menu container the class 'open' when it is open */}
                     <div className='hamburger-nav-list-container text-preset-8 d-flex'>
-                        <NavItems />
+                        {/* Pass the function as a prop to NavItems so the menu can close when user clicks on a nav item */}
+                        <NavItems onNavItemCick={hamburgerToggleHandler} />
                     </div>
                 </div>
             </div>
