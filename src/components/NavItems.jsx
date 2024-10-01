@@ -1,27 +1,41 @@
 import { NavLink } from 'react-router-dom';
 
-const NavItems = ({onNavItemClick}) => {
-  const linkClass = ({ isActive }) => 
-    isActive
-    ? 'nav-item active-nav-item text-preset-8'
-    : 'nav-item';
-
+const NavItems = ({ onLinkClick, isHamburgerMenu }) => {
   return (
     <>
-      <span onClick={onNavItemClick}>
-        <NavLink to="/" className={linkClass}><strong>00</strong> HOME</NavLink>
-      </span>
-      <span onClick={onNavItemClick}>
-        <NavLink to="/destination" className={linkClass}><strong>01</strong> DESTINATION</NavLink>
-      </span>
-      <span onClick={onNavItemClick}>
-        <NavLink to="#" className={linkClass}><strong>02</strong> CREW</NavLink>
-      </span>
-      <span onClick={onNavItemClick}>
-        <NavLink to="#" className={linkClass}><strong>03</strong> TECHNOLOGY</NavLink>
-      </span>
-    </>
-  )
-}
+      <NavLink 
+        to="/" 
+        onClick={isHamburgerMenu ? onLinkClick : undefined} 
+        className={({ isActive }) => isActive ? 'nav-item active-nav-item' : 'nav-item'}
+      >
+        <strong>00</strong> HOME
+      </NavLink>
 
-export default NavItems
+      <NavLink 
+        to="/destination" 
+        onClick={isHamburgerMenu ? onLinkClick : undefined} 
+        className={({ isActive }) => isActive ? 'nav-item active-nav-item' : 'nav-item'}
+      >
+        <strong>01</strong> DESTINATION
+      </NavLink>
+
+      <NavLink 
+        to="/crew" 
+        onClick={isHamburgerMenu ? onLinkClick : undefined} 
+        className={({ isActive }) => isActive ? 'nav-item active-nav-item' : 'nav-item'}
+      >
+        <strong>02</strong> CREW
+      </NavLink>
+
+      <NavLink 
+        to="/technology" 
+        onClick={isHamburgerMenu ? onLinkClick : undefined} 
+        className={({ isActive }) => isActive ? 'nav-item active-nav-item' : 'nav-item'}
+      >
+        <strong>03</strong> TECHNOLOGY
+      </NavLink>
+    </>
+  );
+};
+
+export default NavItems;

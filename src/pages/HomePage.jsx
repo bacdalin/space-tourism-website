@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom"
+import { dataLoader } from "./DestinationPage";
 
 const HomePage = () => {
   return (
