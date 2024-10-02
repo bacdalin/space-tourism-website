@@ -188,9 +188,31 @@ strong {
 
 body {
   color: #ffffff;
-  background: url("../assets/home/background-home-mobile.jpg") no-repeat;
-  background-size: cover;
+  background-color: #0B0D17;
   text-align: center;
+}
+
+.home-bg {
+  background: url("../assets/home/background-home-mobile.jpg") no-repeat;
+}
+
+.destination-bg {
+  background: url("../assets/destination/background-destination-mobile.jpg") no-repeat;
+}
+
+.crew-bg {
+  background: url("../assets/crew/background-crew-mobile.jpg") no-repeat;
+}
+
+.technology-bg {
+  background: url("../assets/technology/background-technology-mobile.jpg") no-repeat;
+}
+
+.home-bg,
+.destination-bg,
+.crew-bg,
+.technology-bg {
+  background-size: cover;
 }
 
 .wrapper {
@@ -289,13 +311,36 @@ a {
   flex: 1;
 }
 
-.destination-img {
-  padding: 2rem;
+.stats-container {
+  justify-content: flex-start;
 }
 
+.destination-img {
+  padding: 1.5rem;
+}
 .destination-img img {
   width: 9.375rem;
   height: 9.375rem;
+}
+
+.destination-main-container .text-container .line {
+  height: 1px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5042);
+  margin-top: 1.5rem;
+}
+
+.distance-stats,
+.travel-time-container {
+  gap: 0.75rem;
+}
+
+.tab-container {
+  gap: 2rem;
+  height: 2rem;
+}
+.tab-container .active-tab {
+  border-bottom: 3px solid #ffffff;
 }
 
 @media (min-width: 48rem) {

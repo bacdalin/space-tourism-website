@@ -9,6 +9,8 @@ const DestinationPage = () => {
     const destination = useLoaderData(); // Get the data of the destination fetched by dataLoader function
     // console.log(destination.name);
 
+    // Since the path in the mock api (from data.json file) is relative, we cannot access the img from this file
+    // So, the imgs are imported, and the one matching the destination name will be displayed
     const images = {
         'Moon': moonImg,
         'Mars': marsImg,
@@ -18,7 +20,7 @@ const DestinationPage = () => {
 
     return (
         <div className="d-flex-sm-column main-container destination-main-container">
-            <div className="d-flex-sm-column page-heading text-preset-6">
+            <div className="d-flex page-heading text-preset-6">
                 <strong className="color-light-primary">01</strong>&nbsp;Pick you destination
             </div>
             <div className="d-flex-sm-column content-container">
@@ -27,27 +29,28 @@ const DestinationPage = () => {
                 </div>
                 <div className="d-flex-sm-column destination-info-container">
                     <div className="d-flex tab-container text-preset-8">
+                        {/* Add active classname for active tab styling */}
                         <NavLink
                             to='/destination/Moon' 
-                            className={({isActive}) => isActive ? "tab-item color-primary" : "tab-item color-secondary"}
+                            className={({isActive}) => isActive ? "tab-item active-tab color-primary" : "tab-item color-secondary"}
                         >
                             Moon
-                        </NavLink>
+                        </NavLink> 
                         <NavLink 
                             to='/destination/Mars'
-                            className={({isActive}) => isActive ? "tab-item color-primary" : "tab-item color-secondary"}
+                            className={({isActive}) => isActive ? "tab-item active-tab color-primary" : "tab-item color-secondary"}
                         >
                             Mars
                         </NavLink>
                         <NavLink 
                             to='/destination/Europa'
-                            className={({isActive}) => isActive ? "tab-item color-primary" : "tab-item color-secondary"}
+                            className={({isActive}) => isActive ? "tab-item active-tab color-primary" : "tab-item color-secondary"}
                         >
                             Europa
                         </NavLink>
                         <NavLink 
                             to='/destination/Titan'
-                            className={({isActive}) => isActive ? "tab-item color-primary" : "tab-item color-secondary"}
+                            className={({isActive}) => isActive ? "tab-item active-tab color-primary" : "tab-item color-secondary"}
                         >
                             Titan
                         </NavLink>
