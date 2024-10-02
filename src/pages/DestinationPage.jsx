@@ -17,32 +17,54 @@ const DestinationPage = () => {
     };
 
     return (
-        <div className="d-flex main-container">
-            <div className="d-flex page-heading text-preset-6"><strong className="color-light-primary">01</strong>&nbsp;Pick you destination</div>
-            <div className="d-flex content-container">
-                <div className="d-flex destination-img">
+        <div className="d-flex-sm-column main-container destination-main-container">
+            <div className="d-flex-sm-column page-heading text-preset-6">
+                <strong className="color-light-primary">01</strong>&nbsp;Pick you destination
+            </div>
+            <div className="d-flex-sm-column content-container">
+                <div className="d-flex-sm-column destination-img">
                     <img src={images[destination.name]} alt={`Image of ${destination.name}`} />
                 </div>
-                <div className="d-flex destination-info-container">
-                    <div className="d-flex tab-container">
-                        <NavLink to='/destination/Moon' className="tab-item">Moon</NavLink>
-                        <NavLink to='/destination/Mars' className="tab-item">Mars</NavLink>
-                        <NavLink to='/destination/Europa' className="tab-item">Europa</NavLink>
-                        <NavLink to='/destination/Titan' className="tab-item">Titan</NavLink>
+                <div className="d-flex-sm-column destination-info-container">
+                    <div className="d-flex tab-container text-preset-8">
+                        <NavLink
+                            to='/destination/Moon' 
+                            className={({isActive}) => isActive ? "tab-item color-primary" : "tab-item color-secondary"}
+                        >
+                            Moon
+                        </NavLink>
+                        <NavLink 
+                            to='/destination/Mars'
+                            className={({isActive}) => isActive ? "tab-item color-primary" : "tab-item color-secondary"}
+                        >
+                            Mars
+                        </NavLink>
+                        <NavLink 
+                            to='/destination/Europa'
+                            className={({isActive}) => isActive ? "tab-item color-primary" : "tab-item color-secondary"}
+                        >
+                            Europa
+                        </NavLink>
+                        <NavLink 
+                            to='/destination/Titan'
+                            className={({isActive}) => isActive ? "tab-item color-primary" : "tab-item color-secondary"}
+                        >
+                            Titan
+                        </NavLink>
                     </div>
-                    <div className="text-container">
-                        <div className="title">{destination.name}</div>
-                        <div className="description">{destination.description}</div>
+                    <div className="d-flex-sm-column text-container">
+                        <div className="title text-preset-2">{destination.name}</div>
+                        <div className="description text-preset-9 color-secondary">{destination.description}</div>
                         <div className="line"></div>
                     </div>
-                    <div className="stats-container">
-                        <div className="distance-stats">
-                            <div className="distance-heading">Avg. distance</div>
-                            <div className="distance">{destination.distance}</div>
+                    <div className="d-flex-sm-column stats-container">
+                        <div className="d-flex-sm-column distance-stats">
+                            <div className="distance-heading text-preset-7 color-secondary">Avg. distance</div>
+                            <div className="distance text-preset-10">{destination.distance}</div>
                         </div>
-                        <div className="travel-time-container">
-                            <div className="travel-time-heading">Est. travel time</div>
-                            <div className="travel-time">{destination.travel}</div>
+                        <div className="d-flex-sm-column travel-time-container">
+                            <div className="travel-time-heading text-preset-7 color-secondary">Est. travel time</div>
+                            <div className="travel-time text-preset-10">{destination.travel}</div>
                         </div>
                     </div>
                 </div>

@@ -83,12 +83,6 @@ strong {
 
 .text-preset-8 {
     @include font-sans-serif-condensed;
-    font-size: px-to-rem(16);
-    letter-spacing: px-to-rem(2);
-}
-
-.text-preset-8-mobile {
-    @include font-sans-serif-condensed;
     font-size: px-to-rem(14);
     letter-spacing: px-to-rem(2);
 }
@@ -105,7 +99,12 @@ strong {
     line-height: 180%;
 }
 
+.text-preset-10 {
+    @include font-serif;
+    font-size: px-to-rem(28);
+}
 
+// Medium Screen
 @media (min-width: px-to-rem(768)) {
     // Text Presets For Tablet
     .text-preset-1 {
@@ -139,7 +138,7 @@ strong {
     }
 }
 
-
+// Large Screen
 @media (min-width: px-to-rem(1440)) {
     // Text Presets For Desktop
     .text-preset-2 {

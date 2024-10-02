@@ -2,6 +2,23 @@
     display: flex;
 }
 
+.d-flex-sm-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .d-none {
     display: none;
+}
+
+// Medium Screen
+@media (min-width: px-to-rem(768)) {
+    .d-flex-md-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
 }
