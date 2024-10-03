@@ -7,7 +7,9 @@ import {
 } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
-import DestinationPage, { dataLoader } from './pages/DestinationPage';
+import DestinationPage, { destinationLoader } from './pages/DestinationPage';
+
+import { dataLoader } from './lib/utils';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -16,13 +18,12 @@ const router = createBrowserRouter(
     {/* Redirect to '/destination/Moon' by default when visiting '/destination' */}
     <Route path='/destination' element={< Navigate to='/destination/Moon' />} />
     {/* Dynamic route for destination based on destination name using React router's data loader */}
-    <Route path='/destination/:name' element={< DestinationPage />} loader={dataLoader} />
+    <Route path='/destination/:name' element={< DestinationPage />} loader={destinationLoader} />
   </Route>
 )
 )
 
 function App() {
-
   return <RouterProvider router={router}/>
 }
 

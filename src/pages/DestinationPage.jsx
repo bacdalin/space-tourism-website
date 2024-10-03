@@ -1,11 +1,12 @@
-import { NavLink, useParams, useLoaderData } from "react-router-dom";
+import { NavLink, useLoaderData } from "react-router-dom";
 import moonImg from '../assets/destination/image-moon.webp';
 import marsImg from '../assets/destination/image-mars.webp';
 import europaImg from '../assets/destination/image-europa.webp';
 import titanImg from '../assets/destination/image-titan.webp';
 
+import { dataLoader } from "../lib/utils";
+
 const DestinationPage = () => {
-    const { name } = useParams(); // Get the dynamic parameter of the URL, name, to identify which destination page the user is on
     const destination = useLoaderData(); // Get the data of the destination fetched by dataLoader function
     // console.log(destination.name);
 
@@ -76,11 +77,15 @@ const DestinationPage = () => {
     )
 };
 
+// Function moved to utils.jsx for reusibility
 // Function to fetch the data of the relevant destination (based on destination name)
-const dataLoader = async ({params}) => {
-    const res = await fetch(`http://localhost:8000/destinations?name=${params.name}`);
-    const data = await res.json();
-    return data[0]; // Since the result is an array, return the first matching item (there should be only one)
-};
+// const dataLoader = async ({params}) => {
+//     const res = await fetch(`http://localhost:8000/destinations?name=${params.name}`);
+//     const data = await res.json();
+//     return data[0]; // Since the result is an array, return the first matching item (there should be only one)
+// };
 
-export { DestinationPage as default, dataLoader };
+// Use dataLoader utility function to fetch the data of the relevant destination (based on destination name parameter in the url)
+const destinationLoader = (params) => dataLoader(params, 'http://localhost:8000/destinations');
+
+export { DestinationPage as default, destinationLoader };
