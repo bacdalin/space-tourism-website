@@ -11,63 +11,64 @@ const CrewPage = () => {
     // Since the path in the mock api (from data.json file) is relative, we cannot access the img from this file
     // So, the imgs are imported, and the one matching the destination name will be displayed
     const images = {
-        'douglas-hurley': hurleyImg,
-        'mark-shuttleworth': shuttleworthImg,
-        'victor-glover': gloverImg,
-        'anousheh-ansari': ansariImg,
+        'Douglas Hurley': hurleyImg,
+        'Mark Shuttleworth': shuttleworthImg,
+        'Victor Glover': gloverImg,
+        'Anousheh Ansari': ansariImg,
     };
 
+    // **Feature remove to minimize code
+    // Check if "name" is a single word or has space (multi-word)
+    // If yes, replace space with hyphen and turn all caracters to lowercase
+    // If no, turn all characters to lowercase
+    // const slugName = crew.name.includes(' ')
+    //     ? crew.name.split(' ').map(word => word.charAt(0).toLowerCase() + word.slice(1)).join('-')
+    //     : crew.name.charAt(0).toLowerCase() + crew.name.slice(1);
+
     return (
-        <div className="d-flex-sm-column main-container crew-main-container">
+        <div className="d-flex-sm-column main-container main-container-wgap crew-main-container">
             <div className="d-flex page-heading text-preset-6">
-                <strong className="color-light-primary">01</strong>&nbsp;Meet Your Crew
+                <strong className="color-primary-extra-light">02</strong>&nbsp;Meet Your Crew
             </div>
             <div className="d-flex-sm-column content-container">
-                <div className="d-flex-sm-column crew-info-container">
+                <div className="d-flex-sm-column info-container">
                     <div className="d-flex-sm-column text-container">
-                        <div className="title text-preset-2">{crew.name}</div>
-                        <div className="description text-preset-9 color-secondary">{crew.description}</div>
-                    </div>
-                    <div className="d-flex tab-container text-preset-8">
-                        {/* Add active classname for active tab styling */}
-                        <NavLink
-                            to='/destination/Moon' 
-                            className={({isActive}) => isActive ? "tab-item active-tab color-primary" : "tab-item color-secondary"}
-                        >
-                            Moon
-                        </NavLink> 
-                        <NavLink 
-                            to='/destination/Mars'
-                            className={({isActive}) => isActive ? "tab-item active-tab color-primary" : "tab-item color-secondary"}
-                        >
-                            Mars
-                        </NavLink>
-                        <NavLink 
-                            to='/destination/Europa'
-                            className={({isActive}) => isActive ? "tab-item active-tab color-primary" : "tab-item color-secondary"}
-                        >
-                            Europa
-                        </NavLink>
-                        <NavLink 
-                            to='/destination/Titan'
-                            className={({isActive}) => isActive ? "tab-item active-tab color-primary" : "tab-item color-secondary"}
-                        >
-                            Titan
-                        </NavLink>
-                    </div>
-                    <div className="d-flex-sm-column destination-img">
-                        <img src={images[crew.name]} alt={`Image of ${crew.name}, ${crew.role}`} />
-                    </div>
-                    {/* <div className="d-flex-sm-column stats-container">
-                        <div className="d-flex-sm-column distance-stats">
-                            <div className="distance-heading text-preset-7 color-secondary">Avg. distance</div>
-                            <div className="distance text-preset-10">{destination.distance}</div>
+                        <div className="d-flex-sm-column role-name-container">
+                            <div className="role text-preset-4 color-primary-light">{crew.role}</div>
+                            <div className="name text-preset-3">{crew.name}</div>
                         </div>
-                        <div className="d-flex-sm-column travel-time-container">
-                            <div className="travel-time-heading text-preset-7 color-secondary">Est. travel time</div>
-                            <div className="travel-time text-preset-10">{destination.travel}</div>
-                        </div>
-                    </div> */}
+                        <div className="bio text-preset-9 color-secondary">{crew.bio}</div>
+                    </div>
+                </div>
+                <div className="d-flex tab-container text-preset-8">
+                    {/* Add active classname for active tab styling */}
+                    <NavLink
+                        to='/crew/douglas-hurley' 
+                        className={({isActive}) => isActive ? "tab-item active-tab" : "tab-item"}
+                    >
+                        <div className="dot-tab"></div>
+                    </NavLink> 
+                    <NavLink 
+                        to='/crew/mark-shuttleworth'
+                        className={({isActive}) => isActive ? "tab-item active-tab" : "tab-item"}
+                    >
+                        <div className="dot-tab"></div>
+                    </NavLink>
+                    <NavLink 
+                        to='/crew/victor-glover'
+                        className={({isActive}) => isActive ? "tab-item active-tab" : "tab-item"}
+                    >
+                        <div className="dot-tab"></div>
+                    </NavLink>
+                    <NavLink 
+                        to='/crew/anousheh-ansari'
+                        className={({isActive}) => isActive ? "tab-item active-tab" : "tab-item"}
+                    >
+                        <div className="dot-tab"></div>
+                    </NavLink>
+                </div>
+                <div className="d-flex-sm-column crew-img">
+                    <img src={images[crew.name]} alt={`Image of ${crew.name}, ${crew.role}`} />
                 </div>
             </div>
         </div>

@@ -7,8 +7,12 @@ strong {
   color: #ffffff;
 }
 
-.color-light-primary {
-  color: rgba(255, 255, 255, 0.5042);
+.color-primary-light {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.color-primary-extra-light {
+  color: rgba(255, 255, 255, 0.25);
 }
 
 .color-secondary {
@@ -297,9 +301,9 @@ a {
   border: none;
 }
 
-.destination-main-container,
+.main-container-wgap,
 .content-container,
-.destination-info-container,
+.info-container,
 .stats-container {
   gap: 1.5rem;
 }
@@ -326,7 +330,7 @@ a {
 .destination-main-container .text-container .line {
   height: 1px;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.5042);
+  background-color: rgba(255, 255, 255, 0.5);
   margin-top: 1.5rem;
 }
 
@@ -335,12 +339,34 @@ a {
   gap: 0.75rem;
 }
 
-.tab-container {
+.destination-main-container .tab-container {
   gap: 2rem;
   height: 2rem;
 }
-.tab-container .active-tab {
+.destination-main-container .tab-container .active-tab {
   border-bottom: 3px solid #ffffff;
+}
+
+.crew-main-container .text-container {
+  gap: 1.5rem;
+}
+.crew-main-container .text-container .role-name-container {
+  gap: 0.75rem;
+}
+.crew-main-container .tab-container {
+  gap: 1rem;
+}
+.crew-main-container .tab-container .dot-tab {
+  background-color: rgba(255, 255, 255, 0.25);
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+}
+.crew-main-container .tab-container .active-tab .dot-tab {
+  background-color: #ffffff;
+}
+.crew-main-container .crew-img img {
+  width: 70%;
 }
 
 @media (min-width: 48rem) {

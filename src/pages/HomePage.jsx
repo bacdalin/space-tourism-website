@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 const HomePage = () => {
   return (
-        <div className="d-flex-sm-column main-container">
+        <div className="d-flex-sm-column main-container home-main-container">
             <div className="d-flex-sm-column hero-text-wrapper">
                 <div className="text-preset-6">So, you want to travel to</div>
                 <div className="text-preset-1">Space</div>

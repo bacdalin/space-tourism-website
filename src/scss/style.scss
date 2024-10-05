@@ -130,9 +130,9 @@ a {
 }
 
 // DESTINATION PAGE
-.destination-main-container,
+.main-container-wgap,
 .content-container,
-.destination-info-container,
+.info-container,
 .stats-container {
     gap: px-to-rem(24);
 }
@@ -170,7 +170,7 @@ a {
     gap: px-to-rem(12);
 }
 
-.tab-container {
+.destination-main-container .tab-container {
     gap: px-to-rem(32);
     height: px-to-rem(32);
 
@@ -178,6 +178,42 @@ a {
         border-bottom: 3px solid $primary-color;
     }
 }
+
+// Crew Page
+.crew-main-container {
+    // .content-container {
+    //     justify-content: space-between;
+    // }
+    .text-container {
+        gap: px-to-rem(24);
+
+        .role-name-container {
+            gap: px-to-rem(12);
+        }
+    }
+
+    .tab-container {
+        gap: px-to-rem(16);
+
+        .dot-tab {
+            background-color: $primary-color-extra-light;
+            width: px-to-rem(10);
+            height: px-to-rem(10);
+            border-radius: 50%;
+        }
+
+        .active-tab {
+            .dot-tab {
+                background-color: $primary-color;
+            }
+        }
+    }
+
+    .crew-img img {
+        width: 70%;
+    }
+}
+
 
 // *** MEDIUM SCREEN ***
 @media (min-width: px-to-rem(768)) {

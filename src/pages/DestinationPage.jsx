@@ -19,37 +19,37 @@ const DestinationPage = () => {
     };
 
     return (
-        <div className="d-flex-sm-column main-container destination-main-container">
+        <div className="d-flex-sm-column main-container main-container-wgap destination-main-container">
             <div className="d-flex page-heading text-preset-6">
-                <strong className="color-light-primary">01</strong>&nbsp;Pick your destination
+                <strong className="color-primary-extra-light">01</strong>&nbsp;Pick your destination
             </div>
             <div className="d-flex-sm-column content-container">
                 <div className="d-flex-sm-column destination-img">
                     <img src={images[destination.name]} alt={`Image of ${destination.name}`} />
                 </div>
-                <div className="d-flex-sm-column destination-info-container">
+                <div className="d-flex-sm-column info-container">
                     <div className="d-flex tab-container text-preset-8">
                         {/* Add active classname for active tab styling */}
                         <NavLink
-                            to='/destination/Moon' 
+                            to='/destination/moon' 
                             className={({isActive}) => isActive ? "tab-item active-tab color-primary" : "tab-item color-secondary"}
                         >
                             Moon
                         </NavLink> 
                         <NavLink 
-                            to='/destination/Mars'
+                            to='/destination/mars'
                             className={({isActive}) => isActive ? "tab-item active-tab color-primary" : "tab-item color-secondary"}
                         >
                             Mars
                         </NavLink>
                         <NavLink 
-                            to='/destination/Europa'
+                            to='/destination/europa'
                             className={({isActive}) => isActive ? "tab-item active-tab color-primary" : "tab-item color-secondary"}
                         >
                             Europa
                         </NavLink>
                         <NavLink 
-                            to='/destination/Titan'
+                            to='/destination/titan'
                             className={({isActive}) => isActive ? "tab-item active-tab color-primary" : "tab-item color-secondary"}
                         >
                             Titan
