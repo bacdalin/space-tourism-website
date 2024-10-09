@@ -222,7 +222,7 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 a {
@@ -347,6 +347,14 @@ a {
   border-bottom: 3px solid #ffffff;
 }
 
+.crew-main-container .content-container {
+  justify-content: start;
+  gap: 3.5rem;
+}
+.crew-main-container .info-container {
+  padding-top: 2.5rem;
+  gap: 3.5rem;
+}
 .crew-main-container .text-container {
   gap: 1.5rem;
 }
@@ -367,6 +375,8 @@ a {
 }
 .crew-main-container .crew-img img {
   width: 70%;
+  height: auto;
+  mask-image: linear-gradient(180deg, rgb(0, 0, 0) 85%, rgba(0, 0, 0, 0) 100%);
 }
 
 @media (min-width: 48rem) {
