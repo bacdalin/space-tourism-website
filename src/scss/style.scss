@@ -81,6 +81,7 @@ a {
         height: 100vh;
         padding-top: px-to-rem(148);
         padding-left: px-to-rem(32);
+        z-index: 9;
         transition: right 0.3s ease-in-out; // Sliding transition for the hamburger menu
 
         &.open {
@@ -221,6 +222,38 @@ a {
         height: auto;
         // Apply gradient to crew img
         mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%);
+    }
+}
+
+// Technology Page
+.tech-main-container {
+    padding: px-to-rem(24) px-to-rem(24) px-to-rem(48) px-to-rem(24);
+
+    .info-container {
+        padding: px-to-rem(0) px-to-rem(24);
+    }
+    .content-container {
+        justify-content: start;
+        gap: px-to-rem(32);
+    }
+
+    .tech-img {
+        padding-top: px-to-rem(64);
+        position: relative;
+        width: 100vw;
+        height: px-to-rem(260);
+
+        &.launch-vehicle-img {
+            background: url('../assets/technology/image-launch-vehicle-portrait.jpg') 50% 80% / cover no-repeat, $tertiary-color;
+        }
+
+        &.spaceport-img {
+            background: url('../assets/technology/image-spaceport-portrait.jpg') 50% 55% / cover no-repeat, $tertiary-color;
+        }
+    }
+
+    .info-container {
+        gap: px-to-rem(40);
     }
 }
 

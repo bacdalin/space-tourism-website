@@ -9,6 +9,7 @@ import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
 import DestinationPage, { destinationLoader } from './pages/DestinationPage';
 import CrewPage, { crewLoader } from './pages/CrewPage';
+import TechnologyPage, { technologyLoader } from './pages/TechnologyPage';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,10 +21,11 @@ const router = createBrowserRouter(
     {/* Dynamic route for destination based on destination name using React router's data loader */}
     <Route path='/destination/:name' element={< DestinationPage />} loader={destinationLoader} />
 
-    {/* Redirect to '/crew/douglashurley' by default when visiting '/crew' */}
     <Route path='/crew' element={< Navigate to='/crew/douglas-hurley' />} />
-    {/* Dynamic route for crew based on their name using React router's data loader */}
     <Route path='/crew/:name' element={< CrewPage />} loader={crewLoader} />
+
+    <Route path='/technology' element={< Navigate to='/technology/launch-vehicle' />} />
+    <Route path='/technology/:name' element={< TechnologyPage />} loader={technologyLoader} />
   </Route>
 )
 )

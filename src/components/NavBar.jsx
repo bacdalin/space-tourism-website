@@ -49,7 +49,6 @@ const NavBar = () => {
                 <div className={`d-flex hamburger-menu-container ${isToggled ? 'open' : ''}`}>
                     <div className='hamburger-nav-list-container text-preset-8 d-flex'>
                         {/* Pass the function as a prop to NavItems so the menu can close when user clicks on a nav item */}
-                        {/* <NavItems onNavItemCick={hamburgerToggleHandler} /> */}
                         <NavItems onLinkClick={hamburgerToggleHandler} isHamburgerMenu={true} />
                     </div>
                 </div>
