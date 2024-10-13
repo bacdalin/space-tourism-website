@@ -238,11 +238,12 @@ a {
     }
 
     .tech-img {
-        padding-top: px-to-rem(64);
+        margin-top: px-to-rem(64);
         position: relative;
         width: 100vw;
         height: px-to-rem(260);
 
+        // Different bg img for each technology tab
         &.launch-vehicle-img {
             background: url('../assets/technology/image-launch-vehicle-portrait.jpg') 50% 80% / cover no-repeat, $tertiary-color;
         }
@@ -250,10 +251,36 @@ a {
         &.spaceport-img {
             background: url('../assets/technology/image-spaceport-portrait.jpg') 50% 55% / cover no-repeat, $tertiary-color;
         }
+
+        &.space-capsule-img {
+            background: url('../assets/technology/image-space-capsule-portrait.jpg') 50% 50% / cover no-repeat, $tertiary-color;
+        }
     }
 
     .info-container {
         gap: px-to-rem(40);
+
+        .tab-container {
+            gap: px-to-rem(16);
+
+            .tab-item {
+                width: px-to-rem(40);
+                height: px-to-rem(40);
+                border: 1px solid $primary-color;
+                border-radius: 50%;
+                text-align: center;
+            }
+
+            .active-tab {
+                background-color: $primary-color;
+                border: none;
+            }
+        }
+
+        .text-container,
+        .terminology-container {
+            gap: px-to-rem(16);
+        }
     }
 }
 

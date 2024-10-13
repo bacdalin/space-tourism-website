@@ -391,7 +391,7 @@ a {
   gap: 2rem;
 }
 .tech-main-container .tech-img {
-  padding-top: 4rem;
+  margin-top: 4rem;
   position: relative;
   width: 100vw;
   height: 16.25rem;
@@ -402,8 +402,29 @@ a {
 .tech-main-container .tech-img.spaceport-img {
   background: url("../assets/technology/image-spaceport-portrait.jpg") 50% 55%/cover no-repeat, #0B0D17;
 }
+.tech-main-container .tech-img.space-capsule-img {
+  background: url("../assets/technology/image-space-capsule-portrait.jpg") 50% 50%/cover no-repeat, #0B0D17;
+}
 .tech-main-container .info-container {
   gap: 2.5rem;
+}
+.tech-main-container .info-container .tab-container {
+  gap: 1rem;
+}
+.tech-main-container .info-container .tab-container .tab-item {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  text-align: center;
+}
+.tech-main-container .info-container .tab-container .active-tab {
+  background-color: #ffffff;
+  border: none;
+}
+.tech-main-container .info-container .text-container,
+.tech-main-container .info-container .terminology-container {
+  gap: 1rem;
 }
 
 @media (min-width: 48rem) {

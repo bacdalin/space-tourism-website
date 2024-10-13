@@ -43,19 +43,19 @@ const TechnologyPage = () => {
                         {/* Add active classname for active tab styling */}
                         <NavLink
                             to='/technology/launch-vehicle' 
-                            className={({isActive}) => isActive ? "tab-item active-tab" : "tab-item"}
+                            className={({isActive}) => isActive ? "tab-item active-tab d-flex-sm-column text-preset-4 color-tertiary" : "tab-item d-flex-sm-column text-preset-4 color-primary"}
                         >
                             <div className="circle-tab">1</div>
                         </NavLink> 
                         <NavLink 
                             to='/technology/spaceport'
-                            className={({isActive}) => isActive ? "tab-item active-tab" : "tab-item"}
+                            className={({isActive}) => isActive ? "tab-item active-tab d-flex-sm-column text-preset-4 color-tertiary" : "tab-item d-flex-sm-column text-preset-4 color-primary"}
                         >
                             <div className="circle-tab">2</div>
                         </NavLink>
                         <NavLink 
                             to='/technology/space-capsule'
-                            className={({isActive}) => isActive ? "tab-item active-tab" : "tab-item"}
+                            className={({isActive}) => isActive ? "tab-item active-tab d-flex-sm-column text-preset-4 color-tertiary" : "tab-item d-flex-sm-column text-preset-4 color-primary"}
                         >
                             <div className="circle-tab">3</div>
                         </NavLink>
